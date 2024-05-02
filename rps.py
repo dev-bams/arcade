@@ -1,11 +1,20 @@
+"""
+blah blah
+"""
 import random
 
 
 def generate_random_number():
+    """
+    blah blah
+    """
     return random.randint(0, 2)
 
 
 def generate_computer_move(random_number):
+    """
+    blah blah
+    """
     if random_number == 0:
         return "rock"
     elif random_number == 1:
@@ -15,15 +24,18 @@ def generate_computer_move(random_number):
 
 
 def get_player_move():
+    """
+    blah blah
+    """
     while True:
         player_move = input(
             "Enter your move (Rock(R), Paper(P), Scissors(S)): ").lower()
         if player_move in ["rock", "paper", "scissors", "r", "p", "s"]:
-            if (player_move == "r"):
+            if player_move == "r":
                 player_move = "rock"
-            elif (player_move == "p"):
+            elif player_move == "p":
                 player_move = "paper"
-            elif (player_move == "s"):
+            elif player_move == "s":
                 player_move = "scissors"
             return player_move
         else:
@@ -31,15 +43,24 @@ def get_player_move():
 
 
 def compare_moves(computer_move, player_move):
+    """
+    blah blah
+    """
     if computer_move == player_move:
         return "draw"
-    elif (computer_move == "rock" and player_move == "scissors") or (computer_move == "paper" and player_move == "rock") or (computer_move == "scissors" and player_move == "paper"):
+    elif (
+        (computer_move == "rock" and player_move == "scissors") or
+        (computer_move == "paper" and player_move == "rock") or
+            (computer_move == "scissors" and player_move == "paper")):
         return "lose"
     else:
         return "win"
 
 
 def increase_score(result, player_score, computer_score):
+    """
+    blah blah
+    """
     if result == "win":
         player_score += 1
     elif result == "lose":
@@ -48,15 +69,21 @@ def increase_score(result, player_score, computer_score):
 
 
 def get_final_score(computer_score, player_score):
+    """
+    blah blah
+    """
     if computer_score > player_score:
-        return "Computer won the whole thing"
+        return "Computer won the whole game"
     elif player_score > computer_score:
-        return "Player won the whole thing"
+        return "Player won the whole game"
     else:
-        return "the whole thing was a draw"
+        return "the whole game was a draw"
 
 
 def play():
+    """
+    blah blah
+    """
     player_score = 0
     computer_score = 0
     while True:
